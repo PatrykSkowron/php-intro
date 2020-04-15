@@ -1,0 +1,51 @@
+<!doctype html>
+
+<?php
+require_once('functions.php');
+?>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My PHP Website</title>
+</head>
+
+<body>
+
+Here present loop of choices
+<?php
+$inputs = [["a","b", "c"],["Cat", "Dog"],["Nikon","Olympus"]];
+foreach ($inputs as $choices) {
+echo("<p>This is: ");
+echo(join(',',$choices));
+echo("</p>");
+};
+?>
+
+
+<p> This is form that redirects to postForm.php
+<p>
+    <form action="postForm.php" method="post">
+
+<p>This is static select</p>
+<p>
+    <select id="cars" name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+    </select>
+</p>
+
+<p> here we have select using functions </p>
+<?php selectAnything(["BMW","Mercedes","Hyundai"], "mycars"); ?>
+<?php selectAnything(["A","B","C"], "letters"); ?>
+<?php selectAnything([1,2,3], "numbers"); ?>
+
+When we click submit, it redirect us to postForm.php file.
+<input type="submit">
+
+</form>
+
+</body>
+</html>
