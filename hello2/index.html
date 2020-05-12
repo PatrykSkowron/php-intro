@@ -1,0 +1,33 @@
+<body>
+
+<h1>My HTML Website</h1>
+
+<p>Hello <?php echo $user; ?>  </p>
+
+
+<?php
+// typy zmiennych (liczby, napisy)
+$zmienna_123 = "<p>This is user with name ${user}</p>";
+
+$a2 = 34;
+$a3 = True;
+
+echo $zmienna_123;
+echo "<p>zmienna liczbowa: ${a2}</p>";
+
+
+$x = 10;
+
+while ($x > 1) {
+    echo "<p>x is {$x} and counting...</p>";
+    $x = $x - 1;
+}
+
+?>
+
+<p>This is the end of the page!</p>
+
+<?php footer("Aleksandra","Siedlce");
+?>
+
+</body>
